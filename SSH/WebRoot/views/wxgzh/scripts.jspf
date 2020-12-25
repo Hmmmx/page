@@ -1,0 +1,18 @@
+<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
+
+<script src="<s:url value="/resources/components/jquery/jquery-3.3.1.min.js" />"></script>
+<script src="<s:url value="/resources/components/jquery/jquery.cookie.js" />"></script>
+<script src="<s:url value="/resources/components/bs4/js/bootstrap.bundle.min.js" />"></script>
+<script src="<s:url value="/resources/components/jquery/jquery.json-2.4.min.js" />"></script>
+
+<script src="<s:url value="/resources/components/pnotify4/dist/iife/PNotify.js" />"></script>
+<script src="<s:url value="/resources/components/pnotify4/dist/iife/PNotifyButtons.js" />"></script>
+<script src="<s:url value="/resources/components/pnotify4/dist/iife/PNotifyMobile.js" />"></script>
+<script src="<s:url value="/resources/components/moment/min/moment.min.js" />"></script>
+<script src="<s:url value="/resources/components/moment/locale/zh-cn.js" />"></script>
+
+<script src="<s:url value="${StaticRsrcUtil.appendVersion('/resources/js/common/misc.js')}" />"></script>
+<script src="<s:url value="${StaticRsrcUtil.appendVersion('/resources/js/common/ctrl.js')}" />"></script>
+<script src="<s:url value="${StaticRsrcUtil.appendVersion('/resources/js/wxgzh/meta.js')}" />"></script>
+

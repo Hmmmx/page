@@ -1,0 +1,294 @@
+<%@ page language="java" pageEncoding="UTF-8" %>
+
+<form action="#" role="form" method="POST" data-auto-validate="true" novalidate>
+<input type="hidden" name="fcid" value="">
+<input type="hidden" name="dyid" value="">
+<input type="hidden" name="lyid" value="">
+<input type="hidden" name="qyid" value="">
+<input type="hidden" name="sqdm" value="">
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_fchm" class="col-2 col-form-label required">房产号码</label>
+    <div class="col-4">
+        <input type="text" class="form-control" id="wgSfFcFcxx_fc_fchm" name="fchm" maxlength="50" required>
+        <div class="invalid-tooltip">请输入不超过50个字符的房产号码</div>
+    </div>
+    
+    <label for="wgSfFcFcxx_fc_fcmc" class="col-2 col-form-label required">房产名称</label>
+    <div class="col-4">
+        <input type="text" class="form-control" id="wgSfFcFcxx_fc_fcmc" name="fcmc" maxlength="100" readonly required>
+        <div class="invalid-tooltip">请输入不超过50个字符的房产名称</div>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_lcdm" class="col-2 col-form-label required">楼层代码</label>
+    <div class="col-4">
+        <select class="custom-select" id="wgSfFcFcxx_fc_lcdm" name="lcdm" required>
+			<option value="">请选择</option>
+			<c:forEach var="i" begin="1" end="10">
+				<optgroup label="${(i-1)*10+1}-${i*10}层">
+				<c:forEach var="j" begin="1" end="10">
+            		<option value="${(i-1)*10+j}">${(i-1)*10+j}</option>
+            	</c:forEach>
+            	</optgroup>
+			</c:forEach>
+		</select>
+        <!-- <input type="text" class="form-control" id="wgSfFcFcxx_fc_lcdm" name="lcdm" maxlength="10" pattern="^0|([1-9]\d*)$" required>
+        <div class="invalid-tooltip">请输入正确的楼层代码数字</div> -->
+    </div>
+    
+    <label for="wgSfFcFcxx_fc_plxh" class="col-2 col-form-label required">排列序号</label>
+    <div class="col-4">
+        <input type="text" class="form-control" id="wgSfFcFcxx_fc_plxh" name="plxh" pattern="^0|([1-9]\d*)$" maxlength="4" required>
+        <div class="invalid-tooltip">请输入不超过4位数的序号</div>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_jzmj" class="col-2 col-form-label required">建筑面积</label>
+    <div class="col-4">
+        <input type="text" class="form-control" id="wgSfFcFcxx_fc_jzmj" name="jzmj" pattern="^[\d\.]+$" maxlength="12" required>
+        <div class="invalid-tooltip">请输入正确的建筑面积</div>
+    </div>
+    <label for="wgSfFcFcxx_fc_tnmj" class="col-2 col-form-label">套内面积</label>
+    <div class="col-4">
+        <input type="text" class="form-control" id="wgSfFcFcxx_fc_tnmj" name="tnmj" pattern="^[\d\.]+$" maxlength="12">
+        <div class="invalid-tooltip">请输入正确的套内面积</div>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_sshxdm" class="col-2 col-form-label">所属户型</label>
+	<div class="col-4">
+		<select class="custom-select" id="wgSfFcFcxx_fc_sshxdm" name="sshxdm">
+			<option value="">请选择</option>
+			<option value="1">1室</option>
+			<option value="2">2室</option>
+			<option value="3">3室</option>
+			<option value="4">4室</option>
+			<option value="5">5室</option>
+			<option value="6">5室以上</option>
+		</select>
+		<div class="invalid-tooltip">请选择相应的户型</div>
+	</div>
+    
+    <label for="wgSfFcFcxx_fc_cxdm" class="col-2 col-form-label">房产朝向</label>
+	<div class="col-4">
+		<select class="custom-select" id="wgSfFcFcxx_fc_cxdm" name="cxdm">
+			<option value="">请选择</option>
+			<option value="1">东</option>
+			<option value="2">南</option>
+			<option value="3">西</option>
+			<option value="4">北</option>
+			<option value="5">东南</option>
+			<option value="6">东北</option>
+			<option value="7">西南</option>
+			<option value="8">西北</option>
+		</select>
+	</div>
+</div>
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_fclxdm" class="col-2 col-form-label">房产类型</label>
+	<div class="col-4">
+		<select class="custom-select" id="wgSfFcFcxx_fc_fclxdm" name="fclxdm">
+			<option value="">请选择</option>
+			<option value="1">普通住宅</option>
+			<option value="5">商铺</option>
+			<option value="2">公寓</option>
+			<option value="3">别墅</option>
+			<option value="4">写字楼</option>
+			<!-- <option value="6">小高层</option>
+			<option value="7">高层</option> -->
+			<option value="8">其他</option>
+		</select>
+	</div>
+    
+    <label for="wgSfFcFcxx_fc_fcxzdm" class="col-2 col-form-label">房产性质</label>
+	<div class="col-4">
+		<select class="custom-select" id="wgSfFcFcxx_fc_fcxzdm" name="fcxzdm">
+			<option value="">请选择</option>
+			<option value="1">商铺房</option>
+			<option value="2">经济适用房</option>
+			<option value="3">房改房</option>
+			<option value="4">廉租房</option>
+			<option value="5">周转房</option>
+			<option value="6">人才房</option>
+			<option value="7">公租房</option>
+			<option value="8">其他</option>
+		</select>
+	</div>
+</div>
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_slzt_1" class="col-2 col-form-label">收楼状态</label>
+    <div class="col-4">
+        <div class="p-sim-ctrl">
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="slzt" id="wgSfFcFcxx_fc_slzt_x" value="" checked>
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_slzt_x">未填写</label>
+			</div>
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="slzt" id="wgSfFcFcxx_fc_slzt_1" value="1">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_slzt_1">已收楼</label>
+			</div>
+	        <div class="custom-control custom-radio custom-control-inline" style="margin-right:0;">
+				<input class="custom-control-input" type="radio" name="slzt" id="wgSfFcFcxx_fc_slzt_0" value="0">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_slzt_0">未收楼</label>
+			</div>
+	    </div>
+    </div>
+    <label for="wgSfFcFcxx_fc_slrq" class="col-2 col-form-label">收楼日期</label>
+    <div class="col-4">
+        <div class="input-group date" id="wgSfFcFcxx_fc_slrq_p" data-target-input="nearest" data-cx-ctrl="date">
+            <input type="text" class="form-control datetimepicker-input" data-target="#wgSfFcFcxx_fc_slrq_p" id="wgSfFcFcxx_fc_slrq" name="slrq" value="" maxlength="10" pattern="^((([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29))$" autocomplete="off" novalidate>
+            <div class="input-group-append" data-target="#wgSfFcFcxx_fc_slrq_p" data-toggle="datetimepicker">
+                <button class="btn btn-outline-secondary input-group-fix" type="button"><i class="fas fa-calendar-alt"></i></button>
+            </div>
+            <div class="invalid-tooltip">时间格式不正确</div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_rzzt_1" class="col-2 col-form-label">入住状态</label>
+    <div class="col-4">
+        <div class="p-sim-ctrl">
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="rzzt" id="wgSfFcFcxx_fc_rzzt_x" value="" checked>
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_rzzt_x">未填写</label>
+			</div>
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="rzzt" id="wgSfFcFcxx_fc_rzzt_1" value="1">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_rzzt_1">已入住</label>
+			</div>
+	        <div class="custom-control custom-radio custom-control-inline" style="margin-right:0;">
+				<input class="custom-control-input" type="radio" name="rzzt" id="wgSfFcFcxx_fc_rzzt_0" value="0">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_rzzt_0">未入住</label>
+			</div>
+	    </div>
+    </div>
+    <label for="wgSfFcFcxx_fc_rzrq" class="col-2 col-form-label">入住日期</label>
+    <div class="col-4">
+        <div class="input-group date" id="wgSfFcFcxx_fc_rzrq_p" data-target-input="nearest" data-cx-ctrl="date">
+            <input type="text" class="form-control datetimepicker-input" data-target="#wgSfFcFcxx_fc_rzrq_p" id="wgSfFcFcxx_fc_rzrq" name="rzrq" value="" maxlength="10" pattern="^((([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29))$" autocomplete="off" novalidate>
+            <div class="input-group-append" data-target="#wgSfFcFcxx_fc_rzrq_p" data-toggle="datetimepicker">
+                <button class="btn btn-outline-secondary input-group-fix" type="button"><i class="fas fa-calendar-alt"></i></button>
+            </div>
+            <div class="invalid-tooltip">时间格式不正确</div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_zxzt_1" class="col-2 col-form-label">装修状态</label>
+    <div class="col-4">
+        <div class="p-sim-ctrl">
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="zxzt" id="wgSfFcFcxx_fc_zxzt_x" value="" checked>
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_zxzt_x">未填写</label>
+			</div>
+	        <div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="zxzt" id="wgSfFcFcxx_fc_zxzt_0" value="0">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_zxzt_0">未装修</label>
+			</div>
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="zxzt" id="wgSfFcFcxx_fc_zxzt_1" value="1">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_zxzt_1">装修中</label>
+			</div>
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:0;">
+				<input class="custom-control-input" type="radio" name="zxzt" id="wgSfFcFcxx_fc_zxzt_2" value="2">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_zxzt_2">已装修</label>
+			</div>
+	    </div>
+    </div>
+    <label for="wgSfFcFcxx_fc_zxrq" class="col-2 col-form-label">装修日期</label>
+    <div class="col-4">
+        <div class="input-group date" id="wgSfFcFcxx_fc_zxrq_p" data-target-input="nearest" data-cx-ctrl="date">
+            <input type="text" class="form-control datetimepicker-input" data-target="#wgSfFcFcxx_fc_zxrq_p" id="wgSfFcFcxx_fc_zxrq" name="zxrq" value="" maxlength="10" pattern="^((([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29))$" autocomplete="off" novalidate>
+            <div class="input-group-append" data-target="#wgSfFcFcxx_fc_zxrq_p" data-toggle="datetimepicker">
+                <button class="btn btn-outline-secondary input-group-fix" type="button"><i class="fas fa-calendar-alt"></i></button>
+            </div>
+            <div class="invalid-tooltip">时间格式不正确</div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_fczt_1" class="col-2 col-form-label">房产状态</label>
+    <div class="col-4">
+        <div class="p-sim-ctrl">
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="fczt" id="wgSfFcFcxx_fc_fczt_1" value="1" checked>
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_fczt_1">有效</label>
+			</div>
+	        <div class="custom-control custom-radio custom-control-inline" style="margin-right:0;">
+				<input class="custom-control-input" type="radio" name="fczt" id="wgSfFcFcxx_fc_fczt_0" value="0">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_fczt_0">无效</label>
+			</div>
+	    </div>
+    </div>
+    <label for="wgSfFcFcxx_fc_cszt_1" class="col-2 col-form-label">出售状态</label>
+    <div class="col-4">
+        <div class="p-sim-ctrl">
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="cszt" id="wgSfFcFcxx_fc_cszt_x" value="" checked>
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_cszt_x">未填写</label>
+			</div>
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="cszt" id="wgSfFcFcxx_fc_cszt_1" value="1">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_cszt_1">已售</label>
+			</div>
+	        <div class="custom-control custom-radio custom-control-inline" style="margin-right:0;">
+				<input class="custom-control-input" type="radio" name="cszt" id="wgSfFcFcxx_fc_cszt_0" value="0">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_cszt_0">待售</label>
+			</div>
+	    </div>
+    </div>
+</div>
+
+<div class="form-group row">
+    <label for="wgSfFcFcxx_fc_czzt_1" class="col-2 col-form-label">是否可租</label>
+    <div class="col-4">
+        <div class="p-sim-ctrl">
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="czzt" id="wgSfFcFcxx_fc_czzt_x" value="" checked>
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_czzt_x">未填写</label>
+			</div>
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="czzt" id="wgSfFcFcxx_fc_czzt_1" value="1">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_czzt_1">可租</label>
+			</div>
+	        <div class="custom-control custom-radio custom-control-inline" style="margin-right:0;">
+				<input class="custom-control-input" type="radio" name="czzt" id="wgSfFcFcxx_fc_czzt_0" value="0">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_czzt_0">不可租</label>
+			</div>
+	    </div>
+    </div>
+    <label for="wgSfFcFcxx_fc_zlzt_1" class="col-2 col-form-label">租赁状态</label>
+    <div class="col-4">
+        <div class="p-sim-ctrl">
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="zlzt" id="wgSfFcFcxx_fc_zlzt_x" value="" checked>
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_zlzt_x">未填写</label>
+			</div>
+			<div class="custom-control custom-radio custom-control-inline" style="margin-right:.125rem;">
+				<input class="custom-control-input" type="radio" name="zlzt" id="wgSfFcFcxx_fc_zlzt_1" value="1">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_zlzt_1">已租</label>
+			</div>
+	        <div class="custom-control custom-radio custom-control-inline" style="margin-right:0;">
+				<input class="custom-control-input" type="radio" name="zlzt" id="wgSfFcFcxx_fc_zlzt_0" value="0">
+				<label class="custom-control-label" for="wgSfFcFcxx_fc_zlzt_0">待租</label>
+			</div>
+	    </div>
+    </div>
+</div>
+
+<div class="form-group row mb-0">
+    <label for="wgSfFcFcxx_fc_bz" class="col-2 col-form-label">备注</label>
+    <div class="col-10">
+        <textarea class="form-control" id="wgSfFcFcxx_fc_bz" name="bz" maxlength="480" rows="10"></textarea>
+    </div>
+</div>
+</form>

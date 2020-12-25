@@ -1,0 +1,33 @@
+<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<link rel="apple-touch-icon-precomposed" href="<s:url value="/resources/img/logo/qyy-128.png" />"/>
+<link rel="icon" href="<s:url value="/resources/img/logo/qyy-128.png" />" sizes="128x128" type="image/png">
+<link rel="icon" href="<s:url value="/resources/img/logo/qyy-96.png" />" sizes="96x96" type="image/png">
+<link rel="icon" href="<s:url value="/resources/img/logo/qyy-64.png" />" sizes="64x64" type="image/png">
+<link rel="icon" href="<s:url value="/resources/img/logo/qyy-48.png" />" sizes="48x48" type="image/png">
+<link rel="icon" href="<s:url value="/resources/img/logo/qyy-32.png" />" sizes="32x32" type="image/png">
+<link rel="icon" href="<s:url value="/resources/img/logo/qyy-16.png" />" sizes="16x16" type="image/png">
+<link rel="icon" href="<s:url value="/resources/img/logo/qyy-32.ico" />" type="image/x-icon">
+
+<link rel="stylesheet" href="<s:url value="/resources/components/bs4/css/bootstrap.min.css" />" />
+<link rel="stylesheet" href="<s:url value="/resources/components/fa-5.12.0/css/all.css" />" />
+<link rel="stylesheet" href="<s:url value="${StaticRsrcUtil.appendVersion('/resources/components/iconfont/iconfont.css') }" />" />
+<link rel="stylesheet" href="<s:url value="/resources/components/bs-treeview/bootstrap-treeview.min.css" />" />
+<link rel="stylesheet" href="<s:url value="/resources/components/bs4-dtp/build/css/tempusdominus-bootstrap-4.min.css" />" />
+<link rel="stylesheet" href="<s:url value="/resources/components/mini-upload/css/style.css" />" />
+<link rel="stylesheet" href="<s:url value="/resources/components/fSelect/fSelect.css" />" />
+<%-- <link rel="stylesheet" href="<s:url value="/resources/components/animate/animate.css" />" /> --%>
+<link rel="stylesheet" href="<s:url value="${StaticRsrcUtil.appendVersion('/resources/css/override.css') }" />" />
+<link rel="stylesheet" href="<s:url value="${StaticRsrcUtil.appendVersion('/resources/css/base.css') }" />" />
+<link rel="stylesheet" href="<s:url value="${StaticRsrcUtil.appendVersion('/resources/css/main.css') }" />" />
+

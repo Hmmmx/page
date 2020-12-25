@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd 
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd 
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
+    
+    <mvc:resources location="/resources/" mapping="/resources/**" />
+    <mvc:resources location="/upload/" mapping="/upload/**" />
+    <mvc:resources location="/persistence/" mapping="/persistence/**" />
+    
+    <!-- 配置自动扫描的包 -->  
+    <!--context:component-scan base-package="cn.sc.web.controller" />
+    <context:component-scan base-package="cn.wy.web.controller" /-->
+    <context:component-scan base-package="cn.wg.web.controller" />
+     <!--context:component-scan base-package="cn.gz.web.controller" /-->
+    <context:component-scan base-package="com.cbp.web.controller" />
+    <context:component-scan base-package="com.ctp.web.controller" />
+	<!--context:component-scan base-package="com.xnf.sas.*.*.*" /-->
+    
+    <!--   Spring 是这样处理AOP代理的问题的，它有两套动态代理的实现，一个是JDK方法的实现，一个就是cglib，proxy-target-class -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10485760"></property> <!-- 10M -->
+	</bean>
+    <!-- 使用mvc:interceptors标签来声明需要加入到SpringMVC拦截器链中的拦截器 -->
+    <mvc:interceptors>
+        <!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
+        <!-- <bean class="com.ctp.core.interceptor.CommonInterceptor"/> -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/" />
+            <mvc:exclude-mapping path="/login" />
+            <mvc:exclude-mapping path="/logon" />
+            <mvc:exclude-mapping path="/logout" />
+            <mvc:exclude-mapping path="/jsonerror/**" />
+            <mvc:exclude-mapping path="/error/**" />
+            <mvc:exclude-mapping path="/resources/**" />
+            <mvc:exclude-mapping path="/upload/**" />
+            <mvc:exclude-mapping path="/persistence/**" />
+            <mvc:exclude-mapping path="/*.txt" />
+            <mvc:exclude-mapping path="/WxJz" />
+            <mvc:exclude-mapping path="/WxJz/**" />
+            <mvc:exclude-mapping path="/WxYh/**" />
+            <mvc:exclude-mapping path="/WxMessage" />
+            <mvc:exclude-mapping path="/WxMessage/**" />
+             <mvc:exclude-mapping path="/WxWyMessage" />
+            <mvc:exclude-mapping path="/WxWyMessage/**" />
+            <mvc:exclude-mapping path="/gz/**" />
+            <bean class="com.ctp.core.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/WxJz" />
+            <mvc:mapping path="/WxJz/**" />
+            <mvc:mapping path="/WxYh/**" />
+            <bean class="com.ctp.core.interceptor.WxJzInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    
+    <!-- 配置视图解析器：如何把handler方法返回值解析为实际的物理视图 -->  
+    <bean  
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/views/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    <mvc:default-servlet-handler />
+     <!--   配置静态资源：default-servlet-handler将在SpringMVC上下文中定义DefaultServletHttpRequestHandler,   
+        它会对进入DispatcherServlet的请求进行帅选，如果发现是没有经过映射的请求，就将该请求交由WEB应用服务器默认的 Servlet处理。如果不是静态资源的请求，才由DispatcherServlet继续处理。 -->  
+  
+    <!-- 配置开启注解 -->  
+    <mvc:annotation-driven/>
+    
+
+    <bean id="stringHttpMessageConverter"
+          class="org.springframework.http.converter.StringHttpMessageConverter"/>
+
+    <!--解决IE浏览器json文件下载和json数据中午乱码的问题-->
+    <bean id="mappingJackson2HttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+</beans> 

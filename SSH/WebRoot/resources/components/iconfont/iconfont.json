@@ -1,0 +1,100 @@
+{
+  "id": "1782793",
+  "name": "金丰图标",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8728346",
+      "name": "门禁",
+      "font_class": "menjin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "10555228",
+      "name": "门锁",
+      "font_class": "mensuo",
+      "unicode": "e6c3",
+      "unicode_decimal": 59075
+    },
+    {
+      "icon_id": "6403473",
+      "name": "door",
+      "font_class": "door",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "923965",
+      "name": "维修",
+      "font_class": "weixiu",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "14197378",
+      "name": "权限设置-01",
+      "font_class": "quanxianshezhi-01",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "1455976",
+      "name": "房屋租赁",
+      "font_class": "fangwuzulin",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "4425606",
+      "name": "整租",
+      "font_class": "zhengzu",
+      "unicode": "e6a8",
+      "unicode_decimal": 59048
+    },
+    {
+      "icon_id": "7071355",
+      "name": "投票",
+      "font_class": "toupiao",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "10418618",
+      "name": "nng-news",
+      "font_class": "news",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12178106",
+      "name": "停车（点击）",
+      "font_class": "tingchedianji",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "12998168",
+      "name": "业务指南",
+      "font_class": "yewuzhinan",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "14038934",
+      "name": "视频播放框-喇叭",
+      "font_class": "shipinbofangkuang-laba",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "14228254",
+      "name": "缴费管理",
+      "font_class": "jiaofeiguanli",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    }
+  ]
+}

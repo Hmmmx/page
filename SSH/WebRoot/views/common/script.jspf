@@ -1,0 +1,28 @@
+<script src="<s:url value="/resources/components/jquery/jquery-3.3.1.min.js" />"></script>
+<script src="<s:url value="/resources/components/jquery/jquery.cookie.js" />"></script>
+<script src="<s:url value="/resources/components/bs4/js/bootstrap.bundle.min.js" />"></script>
+<script src="<s:url value="/resources/components/jquery/jquery.json-2.4.min.js" />"></script>
+<script src="<s:url value="/resources/components/jquery/jquery.color.js" />"></script>
+<script src="<s:url value="/resources/components/jquery/jquery.color.svg-names.js" />"></script>
+<script src="<s:url value="/resources/components/jquery/jquery.filedownload.js" />"></script>
+<script src="<s:url value="/resources/components/vue/vue.js" />"></script>
+<script src="<s:url value="/resources/components/pnotify4/dist/iife/PNotify.js" />"></script>
+<script src="<s:url value="/resources/components/pnotify4/dist/iife/PNotifyButtons.js" />"></script>
+<script src="<s:url value="/resources/components/pnotify4/dist/iife/PNotifyConfirm.js" />"></script>
+<script src="<s:url value="/resources/components/pnotify4/dist/iife/PNotifyMobile.js" />"></script>
+<script src="<s:url value="/resources/components/moment/min/moment.min.js" />"></script>
+<script src="<s:url value="/resources/components/moment/locale/zh-cn.js" />"></script>
+<script src="<s:url value="/resources/components/bs4-dtp/build/js/tempusdominus-bootstrap-4.min.js" />"></script>
+<script src="<s:url value="${StaticRsrcUtil.appendVersion('/resources/components/bs-treeview/src/js/bootstrap-treeview.js') }" />"></script>
+<script src="<s:url value="/resources/components/mini-upload/js/jquery.knob.min.js" />"></script>
+<script src="<s:url value="/resources/components/mini-upload/js/jquery.ui.widget.js" />"></script>
+<script src="<s:url value="/resources/components/mini-upload/js/jquery.iframe-transport.js" />"></script>
+<script src="<s:url value="/resources/components/mini-upload/js/jquery.fileupload.js" />"></script>
+<script src="<s:url value="/resources/components/fSelect/fSelect.js" />"></script>
+    
+<script src="<s:url value="${StaticRsrcUtil.appendVersion('/resources/js/common/nls.js') }" />"></script>
+<script src="<s:url value="${StaticRsrcUtil.appendVersion('/resources/js/common/misc.js') }" />"></script>
+<script src="<s:url value="${StaticRsrcUtil.appendVersion('/resources/js/common/ctrl.js') }" />"></script>
+<script src="<s:url value="${StaticRsrcUtil.appendVersion('/resources/js/common/wg.js') }" />"></script>
+<script src="<s:url value="${StaticRsrcUtil.appendVersion('/resources/js/common/meta.js') }" />"></script>
+	

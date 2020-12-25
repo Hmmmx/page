@@ -1,0 +1,178 @@
+<%@ page language="java" pageEncoding="UTF-8" %>
+
+<div class="mr-2">
+	<div class="card mb-3">
+		<div class="card-header p-2">
+			<span><i class="fas fa-home text-info mr-1"></i></span><span>房产主要信息</span>
+		</div>
+		<div class="card-body p-3">
+			<div class="zhxx-fcxx">
+				<div class="d-flex-between">
+					<span><span>房产名称：</span><span class="ml-2 zhxx-fcxx-fcmc">-</span></span>
+					<span><span>建筑面积：</span><span class="ml-2 zhxx-fcxx-jzmj">-</span></span>
+				</div>
+				<div class="cx-f-xs text-black-50 mt-2">
+					<span><span>备注：</span><span class="ml-2 zhxx-fcxx-bz">-</span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card mb-3">
+		<div class="card-header p-2">
+			<span><i class="fas fa-user text-info mr-1"></i></span><span>客户主要信息</span>
+		</div>
+		<div class="card-body p-3">
+			<div class="table-responsive zhxx-khxx">
+				<table class="table table-sm table-zebra table-hover table-fixed table-wgsf-khxx fixed-thead fixed-row-1st-cell">
+				    <thead class="thead-light">
+				        <tr>
+				            <th class="td-indexer">
+				            	<span>#</span>
+				            </th>
+				            <th>客户</th>
+				            <th style="width:0">客户类型</th>
+				            <th>性别</th>
+				            <th>联系电话</th>
+				            <th>接收短信手机号码</th>
+				            <th>银行代扣</th>
+				            <th style="width:0">状态</th>
+				        </tr>
+				    </thead>
+					<tbody>
+						<tr class="table-row-no-data">
+							<td colspan="8" class="table-empty">暂无数据</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="card  mb-3">
+		<div class="card-header p-2">
+			<span><i class="fas fa-id-card text-info mr-1"></i></span><span>车卡主要信息</span>
+		</div>
+		<div class="card-body p-3">
+			<div class="table-responsive zhxx-khck">
+				<table class="table table-sm table-zebra table-hover table-fixed table-wgsf-khck fixed-thead fixed-row-1st-cell">
+				    <thead class="thead-light">
+				        <tr>
+				            <th class="td-indexer">
+				            	<span>#</span>
+				            </th>
+				            <th>客户</th>
+				            <th>车牌号码</th>
+				            <th>车位</th>
+				            <th>收费标准</th>
+				            <th>车卡号</th>
+				            <th>车卡类型</th>
+				            <th>结束日期</th>
+				            <th style="width:0">状态</th>
+				        </tr>
+				    </thead>
+					<tbody>
+						<tr class="table-row-no-data">
+							<td colspan="9" class="table-empty">暂无数据</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="card mb-3">
+		<div class="card-header p-2">
+			<span><i class="fas fa-check-double text-info mr-1"></i></span><span>核定主要信息</span>
+		</div>
+		<div class="card-body p-3">
+			<div class="table-responsive zhxx-fyhd">
+				<table class="table table-sm table-zebra table-hover table-fixed table-wgsf-hd-fyhd fixed-thead fixed-row-1st-cell">
+				    <thead class="thead-light">
+				        <tr>
+				            <th class="td-indexer">
+				            	<span>#</span>
+				            </th>
+				            <th>客户</th>
+				            <th>费用类型</th>
+				            <th>收费项目</th>
+				            <th>收费标准</th>
+				            <th>开始日期</th>
+				            <th>结束日期</th>
+				        </tr>
+				    </thead>
+					<tbody>
+						<tr class="table-row-no-data">
+							<td colspan="7" class="table-empty">暂无数据</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="card mb-3">
+		<div class="card-header p-2">
+			<span><i class="fas fa-tachometer-alt text-info mr-1"></i></span><span>仪表主要信息</span>
+		</div>
+		<div class="card-body p-3">
+			<div class="table-responsive zhxx-khyb">
+				<table class="table table-sm table-zebra table-hover table-fixed table-wgsf-khyb fixed-thead fixed-row-1st-cell">
+				    <thead class="thead-light">
+				        <tr>
+				            <th class="td-indexer">
+				            	<span>#</span>
+				            </th>
+				            <th>客户</th>
+				            <th>仪表编号</th>
+				            <th>仪表类型</th>
+				            <th>收费标准</th>
+				            <th>开始日期</th>
+				            <th>结束日期</th>
+				            <th style="width:0">状态</th>
+				        </tr>
+				    </thead>
+					<tbody>
+						<tr class="table-row-no-data">
+							<td colspan="8" class="table-empty">暂无数据</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-header p-2">
+			<span><i class="fas fa-list text-info mr-1"></i></span><span>抄表主要信息</span>
+		</div>
+		<div class="card-body p-3">
+			<div class="table-responsive zhxx-khybcb">
+				<table class="table table-sm table-zebra table-hover table-fixed table-wgsf-fy-khfysq-zhxx-ybcb fixed-thead fixed-row-1st-cell">
+				    <thead class="thead-light">
+				        <tr>
+				        	<th class="td-indexer">
+				            	<span>#</span>
+				            </th>
+				            <th>客户名称</th>
+				            <th>仪表类型</th>
+				            <th>更换新表</th>
+				            <th>旧表最后一次用量</th>
+				            <th>上次抄表日期</th>
+				            <th>本次抄表日期</th>
+				            <th>上次读数</th>
+				            <th>本次读数</th>
+				            <th>本次用量</th>
+				            <th>备注</th>
+				        </tr>
+				    </thead>
+					<tbody>
+						<tr class="table-row-no-data">
+							<td colspan="11" class="table-empty">暂无数据</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
